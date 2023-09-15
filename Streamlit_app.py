@@ -7,3 +7,4 @@ Idli w/ vada curry
 Ghee Podi Dosai
 Ghee Pongal w/vada
 Kalakki
+End Of Menu
