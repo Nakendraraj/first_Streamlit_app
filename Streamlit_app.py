@@ -2,9 +2,9 @@ import streamlit
 
 streamlit.title('My Parents New Healthy Diner')
 
-BREAKFAST MENU
-Idli w/ vada curry
-Ghee Podi Dosai
-Ghee Pongal w/vada
-Kalakki
-End Of Menu
+Streamlit.subtitle ('BREAKFAST MENU')
+streamlit.message ('Idli w/ vada curry')
+streamlit.message ('Ghee Podi Dosai')
+streamlit.message ('Ghee Pongal w/vada')
+streamlit.message ('Kalakki')
+
