@@ -1,8 +1,5 @@
 import streamlit
-import pandas
-import requests
-import snowflake.connector
-from urlib.error import URLError
+from urllib.error import URLError
 
 streamlit.title('My Parents New Healthy Diner')
 
@@ -12,6 +9,7 @@ streamlit.text ('Ghee Podi Dosai')
 streamlit.text ('Ghee Pongal w/vada')
 streamlit.text ('🐔 Kalakki')
 
+import pandas
 streamlit.header('🍌🥭 Build Your Own Fruit Punch 🥝🍇')
 
 my_fruit_list = pandas.read_csv(" https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -22,6 +20,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #displaying the data in tablular format
 streamlit.dataframe(fruits_to_show)
 
+import requests
 # New section to pull fruity vice api response
 streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
@@ -37,7 +36,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 Streamlit.stop()
 
-
+import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
