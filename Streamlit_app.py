@@ -17,3 +17,8 @@ fruits_selected = streamlit.multiselect ("Pick your own choice of fruits:", list
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 #displaying the data in tablular format
 streamlit.dataframe(fruits_to_show)
+
+# New section to pull fruity vice api response
+import requests
+fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
